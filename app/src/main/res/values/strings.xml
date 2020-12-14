@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ByLine</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quote_format">%s</string>
+    <string name="score_format">%d</string>
+</resources>
