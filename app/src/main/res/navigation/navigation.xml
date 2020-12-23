@@ -1,10 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
     app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.file.saurabh.byline.homefragment.HomeFragment"
-        android:label="HomeFragment" />
+        android:label=" Trending Today" >
+        <action
+            android:id="@+id/action_homeFragment_to_leagueClubsFragment"
+            app:destination="@id/leagueClubsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.file.saurabh.byline.newsfragment.NewsFragment"
+        android:label="Trending Today" />
+    <fragment
+        android:id="@+id/latestResultsFragment"
+        android:name="com.file.saurabh.byline.latestresults.LatestResultsFragment"
+        android:label="Latest Results"
+        tools:layout="@layout/fragment_latest_results" />
+    <fragment
+        android:id="@+id/topScorersFragment"
+        android:name="com.file.saurabh.byline.topscorersfragment.TopScorersFragment"
+        android:label="Top Scorers"
+        tools:layout="@layout/fragment_top_scorers" />
+    <fragment
+        android:id="@+id/leagueTablesFragment"
+        android:name="com.file.saurabh.byline.leaguetablesfragment.LeagueTablesFragment"
+        android:label="League Tables"
+        tools:layout="@layout/fragment_league_tables" >
+        <action
+            android:id="@+id/action_leagueTablesFragment_to_formGuideFragment"
+            app:destination="@id/formGuideFragment"
+            app:popUpTo="@id/leagueTablesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotAroundLeaguesFragment"
+        android:name="com.file.saurabh.byline.hotaroundleaguesfragment.HotAroundLeaguesFragment"
+        android:label="Hot Around Leagues"
+        tools:layout="@layout/fragment_hot_around_leagues" />
+    <fragment
+        android:id="@+id/chooseClubsFragment"
+        android:name="com.file.saurabh.byline.ChooseClubFragment"
+        android:label="ChooseClubFragment" />
+    <fragment
+        android:id="@+id/leagueClubsFragment"
+        android:name="com.file.saurabh.byline.legueclubs.LeagueClubsFragment"
+        android:label="LeagueClubsFragment" />
+    <fragment
+        android:id="@+id/clubListFragment"
+        android:name="com.file.saurabh.byline.legueclubs.ClubListFragment"
+        android:label="ClubListFragment" />
+    <fragment
+        android:id="@+id/formGuideFragment"
+        android:name="com.file.saurabh.byline.leaguetablesfragment.FormGuideFragment"
+        android:label="Form Guide">
+
+        <argument
+            android:name="currentTeamsFormGuide"
+            app:argType="com.file.saurabh.byline.network.moshipropertyclasses.LeagueTable$Table" />
+    </fragment>
 </navigation>

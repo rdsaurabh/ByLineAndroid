@@ -1,9 +1,11 @@
 package com.file.saurabh.byline.newsfragment
 
+import android.content.SharedPreferences
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.file.saurabh.byline.network.NewsAPI
 import com.file.saurabh.byline.network.moshipropertyclasses.TopHeadlinesProperty
 import kotlinx.coroutines.*
@@ -23,16 +25,16 @@ class NewsViewModel : ViewModel() {
 
 
 
-    fun fetchTopHeadlines() {
-
-        val currentDate = LocalDateTime.now().minusHours(48)
+    fun fetchTopHeadlines(queryParameter : String) {
+            
+        val currentDate = LocalDateTime.now().minusHours(36)
 
         val dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
         val fromDate  : String = currentDate.format(dateFormatter)
 
 
         coroutineScope.launch {
-            val deferred : Deferred<TopHeadlinesProperty> = NewsAPI.newsServiceObject.getTopHeadlines(fromDate)
+            val deferred : Deferred<TopHeadlinesProperty> = NewsAPI.newsServiceObject.getTopHeadlines(queryParameter,fromDate)
 
             try{
                 val topHeadlinesProperty : TopHeadlinesProperty = deferred.await()

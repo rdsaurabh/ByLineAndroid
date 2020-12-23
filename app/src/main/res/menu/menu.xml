@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/club_crest_icon"
+        android:title=""
+        app:actionLayout="@layout/club_crest_icon_layout"
+        app:showAsAction="always" >
+    </item>
+</menu>
