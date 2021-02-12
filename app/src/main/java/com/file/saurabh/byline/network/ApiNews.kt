@@ -1,10 +1,7 @@
 package com.file.saurabh.byline.network
 
 import com.file.saurabh.byline.legueclubs.League
-import com.file.saurabh.byline.network.moshipropertyclasses.Clubs
-import com.file.saurabh.byline.network.moshipropertyclasses.LeagueTable
-import com.file.saurabh.byline.network.moshipropertyclasses.TopHeadlinesProperty
-import com.file.saurabh.byline.network.moshipropertyclasses.TopScorers
+import com.file.saurabh.byline.network.moshipropertyclasses.*
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -32,7 +29,7 @@ private val moshi : Moshi by lazy {
 private val retrofitNews : Retrofit by lazy {
     Retrofit.Builder()
         .addConverterFactory(MoshiConverterFactory.create(moshi))
-        .addCallAdapterFactory(CoroutineCallAdapterFactory())
+        .addCallAdapterFactory(CoroutineCallAdapterFactory()) //makes retrofit able to return deffered objects
         .baseUrl(baseURLNews)
         .build()
 }
@@ -84,6 +81,9 @@ interface FootballService{
     @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
     fun getPremierLeagueStandings() : Deferred<LeagueTable>
 
+    @GET("competitions/PL/matches")
+    @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
+    fun getPremierLeagueMatches() : Deferred<Matchdays>
 
 
 
@@ -102,6 +102,9 @@ interface FootballService{
     @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
     fun getLaLigaStandings() : Deferred<LeagueTable>
 
+    @GET("competitions/PD/matches")
+    @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
+    fun getLaLigaMatches() : Deferred<Matchdays>
 
 
 
@@ -120,6 +123,10 @@ interface FootballService{
     @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
     fun getBundesligaStandings() : Deferred<LeagueTable>
 
+    @GET("competitions/BL1/matches")
+    @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
+    fun getBundesligaMatches() : Deferred<Matchdays>
+
 
 
 
@@ -137,6 +144,10 @@ interface FootballService{
     @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
     fun getSerieAStandings() : Deferred<LeagueTable>
 
+    @GET("competitions/SA/matches")
+    @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
+    fun getSerieAMatches() : Deferred<Matchdays>
+
 
 
 
@@ -153,5 +164,9 @@ interface FootballService{
     @GET("competitions/FL1/standings")
     @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
     fun getFrenchLeagueStandings() : Deferred<LeagueTable>
+
+    @GET("competitions/FL1/matches")
+    @Headers("X-Auth-Token:a69465ba912f4224963c86bffce39cfb")
+    fun getFrenchLeagueMatches() : Deferred<Matchdays>
 
 }
