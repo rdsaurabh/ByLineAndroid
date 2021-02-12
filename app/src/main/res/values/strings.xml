@@ -4,4 +4,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="quote_format">%s</string>
     <string name="score_format">%d</string>
+    <!-- shared prefernce keys-->
+    <string name="my_club_preference">MY_CLUB_PREFERENCE</string>
+    <string name="my_club_key">MY_CLUB_KEY</string>
+    <string name="no_club_chosen">NO_CLUB_CHOSEN</string>
+    <string name="my_club_crest_key">MY_CLUB_CREST_KEY</string>
+
 </resources>

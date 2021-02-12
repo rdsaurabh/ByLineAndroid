@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".leaguetablesfragment.FormGuideFragment">
+
+
+            <ImageView
+                android:id="@+id/formGuideClubCrestImageView"
+                android:layout_width="165dp"
+                android:layout_height="231dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/formGuidePositionTextView"
+                android:layout_width="124dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="20"
+                android:textColor="@color/purple_700"
+                android:textSize="50sp"
+                android:typeface="monospace"
+                app:layout_constraintStart_toEndOf="@+id/formGuideClubCrestImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/formGuideGoalsScoredTextView"
+                android:layout_width="124dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="20"
+                android:textColor="@color/purple_700"
+                android:textSize="50sp"
+                android:typeface="monospace"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formGuideClubCrestImageView" />
+
+            <TextView
+                android:id="@+id/formGoalsConcededTextView"
+                android:layout_width="124dp"
+                android:layout_height="148dp"
+                android:layout_marginEnd="44dp"
+                android:autoSizeTextType="uniform"
+                android:text="20"
+                android:textColor="@color/purple_700"
+                android:textSize="50sp"
+                android:typeface="monospace"
+                app:layout_constraintBaseline_toBaselineOf="@+id/formGuideGoalsScoredTextView"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/formGuideClubNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:autoSizeTextType="uniform"
+                android:text="Chelsea FC"
+                android:textColor="@color/purple_700"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/formGuideClubCrestImageView"
+                app:layout_constraintTop_toBottomOf="@+id/formGuidePositionTextView" />
+
+            <TextView
+                android:id="@+id/formGuideGoalsScoredLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:autoSizeTextType="uniform"
+                android:text="Goals Scored"
+                android:textColor="@color/purple_700"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formGuideGoalsScoredTextView" />
+
+            <TextView
+                android:id="@+id/formGuideLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:autoSizeTextType="uniform"
+                android:text="Form Guide :"
+                android:textColor="@color/purple_700"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formGuideGoalsScoredLabel" />
+
+            <TextView
+                android:id="@+id/formGuideGoalsConcededLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="Goals Conceded"
+                android:textColor="@color/purple_700"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/formGuideGoalsScoredLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/pLabel"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:text="P"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toStartOf="@+id/wLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formGuideOne" />
+
+            <TextView
+                android:id="@+id/pTextView"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="38"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toStartOf="@+id/wTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pLabel" />
+
+            <TextView
+                android:id="@+id/wLabel"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="W"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pLabel"
+                app:layout_constraintEnd_toStartOf="@+id/dLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pLabel" />
+
+            <TextView
+                android:id="@+id/formGuideTwo"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="W"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/formGuideOne"
+                app:layout_constraintEnd_toStartOf="@+id/formGuideThree"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/formGuideOne" />
+
+            <TextView
+                android:id="@+id/formGuideOne"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="W"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toStartOf="@+id/formGuideTwo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formGuideLabel" />
+
+            <TextView
+                android:id="@+id/formGuideThree"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="W"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/formGuideTwo"
+                app:layout_constraintEnd_toStartOf="@+id/formGuideFour"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/formGuideTwo" />
+
+            <TextView
+                android:id="@+id/formGuideFour"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="W"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/formGuideThree"
+                app:layout_constraintEnd_toStartOf="@+id/formGuideFive"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/formGuideThree" />
+
+            <TextView
+                android:id="@+id/formGuideFive"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="W"
+                android:textSize="40sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/formGuideFour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/formGuideFour" />
+
+            <TextView
+                android:id="@+id/wTextView"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="38"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/dTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pTextView"
+                app:layout_constraintTop_toBottomOf="@+id/wLabel" />
+
+            <TextView
+                android:id="@+id/dLabel"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="D"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                app:layout_constraintBaseline_toBaselineOf="@+id/wLabel"
+                app:layout_constraintEnd_toStartOf="@+id/l_label"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/wLabel" />
+
+            <TextView
+                android:id="@+id/dTextView"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="38"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/lTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/wTextView"
+                app:layout_constraintTop_toBottomOf="@+id/dLabel" />
+
+            <TextView
+                android:id="@+id/l_label"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="L"
+                android:textSize="40sp"
+                android:textColor="@color/design_default_color_primary"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gdLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dLabel" />
+
+            <TextView
+                android:id="@+id/lTextView"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="38"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/gdTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dTextView"
+                app:layout_constraintTop_toBottomOf="@+id/l_label" />
+
+            <TextView
+                android:id="@+id/gdTextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="38"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/ptsTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/lTextView"
+                app:layout_constraintTop_toBottomOf="@+id/gdLabel" />
+
+            <TextView
+                android:id="@+id/gdLabel"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="GD"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                app:layout_constraintBaseline_toBaselineOf="@+id/l_label"
+                app:layout_constraintEnd_toStartOf="@+id/ptsLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/l_label" />
+
+            <TextView
+                android:id="@+id/ptsLabel"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:text="Pts"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary"
+                app:layout_constraintBaseline_toBaselineOf="@+id/gdLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/gdLabel" />
+
+            <TextView
+                android:id="@+id/ptsTextView"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:text="38"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/black"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/gdTextView"
+                app:layout_constraintTop_toBottomOf="@+id/ptsLabel" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

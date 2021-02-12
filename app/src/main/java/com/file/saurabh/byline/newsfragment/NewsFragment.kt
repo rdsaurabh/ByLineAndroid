@@ -1,8 +1,10 @@
 package com.file.saurabh.byline.newsfragment
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,14 +23,17 @@ import com.file.saurabh.byline.databinding.FragmentNewsBinding
 
 
 
-class NewsFragment : Fragment(),NewsViewAdapter.NewsViewCardClickedListener {
-    private lateinit var newsViewModel: NewsViewModel
-    private lateinit var newsRecyclerView: RecyclerView
+class NewsFragment(val queryParameter : String = "soccer-football") : Fragment(),NewsViewAdapter.NewsViewCardClickedListener {
+     private  lateinit var newsViewModel: NewsViewModel
+     private lateinit var newsRecyclerView: RecyclerView
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val binding = DataBindingUtil.inflate<FragmentNewsBinding>(inflater,R.layout.fragment_news,container,false)
         newsViewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
 
@@ -36,7 +41,7 @@ class NewsFragment : Fragment(),NewsViewAdapter.NewsViewCardClickedListener {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.newsViewModel = newsViewModel
 
-        newsViewModel.fetchTopHeadlines()
+        newsViewModel.fetchTopHeadlines(queryParameter)
 
         return  binding.root
     }
@@ -68,6 +73,8 @@ class NewsFragment : Fragment(),NewsViewAdapter.NewsViewCardClickedListener {
              .launchUrl(context, Uri.parse(url))
 
     }
+
+
 
 
 }

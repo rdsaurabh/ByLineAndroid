@@ -34,7 +34,7 @@ class NewsViewAdapter(private val newsViewCardClickedListener: NewsViewCardClick
         val newsSource : TextView = itemView.findViewById(R.id.source)
         val newsDescription : TextView = itemView.findViewById(R.id.description)
         val newsImage : ImageView = itemView.findViewById(R.id.newsImage)
-        val progressBar : ProgressBar = itemView.findViewById(R.id.progressBar)
+        val progressBar : ProgressBar = itemView.findViewById(R.id.newsItemProgressBar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsCardViewHolder {
@@ -50,6 +50,7 @@ class NewsViewAdapter(private val newsViewCardClickedListener: NewsViewCardClick
         holder.newsDescription.text = currentArticles[position].description
         holder.newsImage.setImageResource(R.drawable.ic_launcher_foreground)
         holder.progressBar.visibility = ProgressBar.VISIBLE
+
         Glide.with(holder.itemView.context)
                 .load(currentArticles[position].urlToImage)
                 .listener(object : RequestListener<Drawable>{
